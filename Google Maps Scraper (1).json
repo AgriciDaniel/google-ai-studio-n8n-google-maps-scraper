@@ -1,0 +1,759 @@
+{
+  "name": "Google Maps Scraper",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "leads-scraper-maps",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -432,
+        -176
+      ],
+      "id": "6c7d314a-4a36-4315-8d67-d2b9afe56c43",
+      "name": "Webhook",
+      "webhookId": "58e00905-6ca3-431b-8a65-2b914cbebfd8"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1mOy9gQ6I_x3t5xXwZ9Fog9aMC2FGfgcq5QtbM146ua8",
+          "mode": "list",
+          "cachedResultName": "Google Maps Scraper",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mOy9gQ6I_x3t5xXwZ9Fog9aMC2FGfgcq5QtbM146ua8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mOy9gQ6I_x3t5xXwZ9Fog9aMC2FGfgcq5QtbM146ua8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Generated Date": "={{ $json.generatedDate }}",
+            "Search City": "={{ $json.searchCity }}",
+            "Search Country": "={{ $json.searchCountry }}",
+            "Lead Number": "={{ $json.leadNumber }}",
+            "Company Name": "={{ $json.companyName }}",
+            "Category": "={{ $json.category }}",
+            "Description": "={{ $json.description }}",
+            "Address": "={{ $json.address }}",
+            "City": "={{ $json.city }}",
+            "Country": "={{ $json.country }}",
+            "Coordinates": "={{ $json.coordinates }}",
+            "Phone": "={{ $json.phone }}",
+            "Email": "={{ $json.email }}",
+            "Website": "={{ $json.website }}",
+            "LinkedIn": "={{ $json.linkedIn }}",
+            "Facebook": "={{ $json.facebook }}",
+            "Instagram": "={{ $json.instagram }}",
+            "Rating": "={{ $json.rating }}",
+            "Review Count": "={{ $json.reviewCount }}",
+            "Business Hours": "={{ Object.entries($json.businessHours).map(([day, hours]) => `${day}: ${hours}`).join('\\n') }}",
+            "Quality Score": "={{ $json.qualityScore }}",
+            "Quality Reasoning": "={{ $json.qualityReasoning }}",
+            "Status": "={{ $json.status }}",
+            "Contacted": "={{ $json.contacted }}",
+            "Notes": "={{ $json.notes }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Generated Date",
+              "displayName": "Generated Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Search City",
+              "displayName": "Search City",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Search Country",
+              "displayName": "Search Country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Lead Number",
+              "displayName": "Lead Number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Category",
+              "displayName": "Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Description",
+              "displayName": "Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "City",
+              "displayName": "City",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Country",
+              "displayName": "Country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Coordinates",
+              "displayName": "Coordinates",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Phone",
+              "displayName": "Phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "displayName": "Website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LinkedIn",
+              "displayName": "LinkedIn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Facebook",
+              "displayName": "Facebook",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Instagram",
+              "displayName": "Instagram",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Rating",
+              "displayName": "Rating",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Review Count",
+              "displayName": "Review Count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Business Hours",
+              "displayName": "Business Hours",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Quality Score",
+              "displayName": "Quality Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Quality Reasoning",
+              "displayName": "Quality Reasoning",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contacted",
+              "displayName": "Contacted",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Notes",
+              "displayName": "Notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        64,
+        -176
+      ],
+      "id": "49c0df74-24b6-4466-bf68-cce19b1cd7a4",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "uhsfebQXSwOtxKjN",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "body",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        -176
+      ],
+      "id": "fbbc3128-6051-429f-a91a-10d09ddc4b33",
+      "name": "Split Out"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "agrici.app.n8n.cloud",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+            "content-length": "12450",
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "accept-language": "en-US,en;q=0.9",
+            "cdn-loop": "cloudflare; loops=1; subreqs=1",
+            "cf-connecting-ip": "178.132.108.26",
+            "cf-ew-via": "15",
+            "cf-ipcountry": "RO",
+            "cf-ray": "99b9592826b413ad-OTP",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "n8n.cloud",
+            "content-type": "application/json",
+            "origin": "https://1q64ermi1zbshyp52hpco3h08ne81hn77ikvdl2357ukj76dd5-h827969114.scf.usercontent.goog",
+            "priority": "u=1, i",
+            "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "x-forwarded-for": "178.132.108.26, 162.158.18.61",
+            "x-forwarded-host": "agrici.app.n8n.cloud",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "traefik-prod-users-gwc-40-669b86c79-c5x7g",
+            "x-is-trusted": "yes",
+            "x-real-ip": "178.132.108.26"
+          },
+          "params": {},
+          "query": {},
+          "body": [
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 1,
+              "companyName": "RR Plumbing Roto-Rooter",
+              "category": "Plumber",
+              "description": "Known for drain cleaning and sewer cleaning, this company provides round-the-clock service for plumbing-related emergencies.",
+              "address": "450 7th Ave Ste B, New York, NY 10123, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(212) 687-1215",
+              "email": "marketing@rrsc.com",
+              "website": "https://www.rotorooter.com/manhattan/",
+              "linkedIn": "https://www.linkedin.com/company/roto-rooter",
+              "facebook": "https://www.facebook.com/RotoRooter",
+              "instagram": "https://www.instagram.com/rotorooter/",
+              "rating": 4.8,
+              "reviewCount": 1496,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 95,
+              "qualityReasoning": "All core information found. Social media URLs inferred from brand name as direct links were not provided in search results.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 2,
+              "companyName": "Plumbing NYC",
+              "category": "Plumber",
+              "description": "Plumbing company in NYC with over 30 years of experience, provides expert residential & commercial plumber in NYC, Manhattan, Queens & Brooklyn. Our plumbers are highly skilled, licensed, and insured professionals who can handle any plumbing problem you have fast and with high-quality service.",
+              "address": "510 W 45th St apt 11g, New York, NY 10036, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(646) 580-7524",
+              "email": null,
+              "website": "https://plumbing-nyc.com/",
+              "linkedIn": null,
+              "facebook": null,
+              "instagram": null,
+              "rating": 4.8,
+              "reviewCount": 55,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 70,
+              "qualityReasoning": "Core information and website found. Social media and email were not found through search queries.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 3,
+              "companyName": "A&E NYC Plumbing",
+              "category": "Plumber",
+              "description": "Plumbing and faucet repair business supplying workers who maintain cleanliness and have an efficient and professional demeanor.",
+              "address": "40 Fulton St, New York, NY 10038, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(646) 392-7164",
+              "email": "topplumbernyc@gmail.com",
+              "website": "https://www.topplumbernyc.com/",
+              "linkedIn": "https://www.linkedin.com/company/a-e-nyc-plumbing",
+              "facebook": "https://www.facebook.com/AENYCPlumbing",
+              "instagram": null,
+              "rating": 5,
+              "reviewCount": 125,
+              "businessHours": {
+                "Monday": "7:00 AM – 8:00 PM",
+                "Tuesday": "7:00 AM – 8:00 PM",
+                "Wednesday": "7:00 AM – 8:00 PM",
+                "Thursday": "7:00 AM – 8:00 PM",
+                "Friday": "7:00 AM – 8:00 PM",
+                "Saturday": "7:00 AM – 8:00 PM",
+                "Sunday": "7:00 AM – 8:00 PM"
+              },
+              "qualityScore": 85,
+              "qualityReasoning": "Core information and website found, along with an email. Social media URLs are inferred based on brand name. Instagram was not found.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 4,
+              "companyName": "Rite Plumbing & Heating Inc",
+              "category": "Plumber",
+              "description": "Plumbing and heating pros who emphasize trustworthiness, fairness, and security.",
+              "address": "750 Lexington Ave 9th floor, New York, NY 10022, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(347) 502-6441",
+              "email": "info@riteplumbingnyc.com",
+              "website": "https://riteplumbingnyc.com/",
+              "linkedIn": null,
+              "facebook": "https://www.facebook.com/RitePlumbingHeatingInc",
+              "instagram": null,
+              "rating": 4.5,
+              "reviewCount": 66,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 80,
+              "qualityReasoning": "Core information, website, and email found. Facebook presence is implied, but direct URL not given, so inferred. LinkedIn and Instagram not found.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 5,
+              "companyName": "Nexus New York Plumber & Drain",
+              "category": "Plumber",
+              "description": "Skilled company known for water heaters or gas and septic system work, plus other repairs and installations. They offer comprehensive services from clogged toilet repair to sewer line replacement, drain cleaning, and water heater maintenance.",
+              "address": "268 Bowery FLOOR 3, New York, NY 10012, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(332) 241-7066",
+              "email": null,
+              "website": "https://newyorkplumberdrain.com/",
+              "linkedIn": "https://www.linkedin.com/company/nexus-new-york-plumber-drain",
+              "facebook": "https://www.facebook.com/NexusNewYorkPlumberDrain",
+              "instagram": "https://www.instagram.com/nexusnewyorkplumberdrain/",
+              "rating": 5,
+              "reviewCount": 61,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 85,
+              "qualityReasoning": "Core information and website found. All social media icons were present on their website or mentioned in a directory, but direct URLs were not given so they are inferred. Email was not found.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 6,
+              "companyName": "NYC Plumbing Services /Mentor Mechanical",
+              "category": "Plumber",
+              "description": "At the heart of the bustling Big Apple, NYC Plumbing Services / Mentor Mechanical stands as a beacon of reliability in the plumbing sector. With a name that resonates with mentorship and expertise, this company is likely dedicated to not only offering top-tier plumbing solutions but also nurturing a team that embodies skill and integrity.",
+              "address": "319 E 75th St, New York, NY 10021, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(718) 804-5781",
+              "email": null,
+              "website": null,
+              "linkedIn": null,
+              "facebook": null,
+              "instagram": null,
+              "rating": 5,
+              "reviewCount": 108,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 50,
+              "qualityReasoning": "Only core information and a brief description were found via Google Maps. No official website, social media, or email could be identified through subsequent searches.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 7,
+              "companyName": "NYC Quality Plumbing",
+              "category": "Plumber",
+              "description": "NYC Quality Plumbing provides a comprehensive suite of plumbing solutions, including general maintenance, sophisticated leak detection, drain cleaning, and water heater services, all delivered with a customer-centric approach that emphasizes reliability, efficiency, and expert craftsmanship to ensure customer satisfaction.",
+              "address": "885 6th Ave, New York, NY 10001, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(332) 222-0135",
+              "email": null,
+              "website": null,
+              "linkedIn": "https://www.linkedin.com/company/nyc-quality-plumbing",
+              "facebook": "https://www.facebook.com/NYCQualityPlumbing",
+              "instagram": "https://www.instagram.com/nycqualityplumbing/",
+              "rating": 4.9,
+              "reviewCount": 63,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 65,
+              "qualityReasoning": "Core information and a description were found. Social media presence is implied by directory icons, so URLs are inferred. No official website or direct email was found.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 8,
+              "companyName": "Empire NYC Plumbers, Drain & Sewer Cleaning",
+              "category": "Plumber",
+              "description": "Plumbing company offering repairs for sinks, faucets, toilets, and other problems, plus drainage services. They pride themselves on extensive knowledge and experience, offering 24/7 emergency services, water heater repairs, drain and sewer cleaning.",
+              "address": "537 W 150th St, New York, NY 10031, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(646) 349-6213",
+              "email": "EmpireWMS@gmail.com",
+              "website": "https://empireplumbers.nyc/",
+              "linkedIn": "https://www.linkedin.com/company/empire-nyc-plumbers",
+              "facebook": "https://www.facebook.com/EmpireNYCPlumbers",
+              "instagram": "https://www.instagram.com/empirenycplumbers/",
+              "rating": 5,
+              "reviewCount": 74,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 90,
+              "qualityReasoning": "Core information, website, and email found. All social media icons were mentioned in a directory, so URLs are inferred.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 9,
+              "companyName": "LZ Manhattan Plumbing New York",
+              "category": "Plumber",
+              "description": "Plumbing company also providing water heaters, toilets, and other HVAC services. The experts at LZ Manhattan Plumbing New York are prepared to handle any plumbing emergency. Their years of experience have equipped them to handle any problem that may arise with plumbing system, including but not limited to: rooter service, water pressure adjustment, water line repair, broken pipes, leaks, garbage disposal problems.",
+              "address": "3060 NY-2200 Frederick Douglass Blvd, New York, NY 10026, USA",
+              "city": "New York",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(315) 526-8735",
+              "email": null,
+              "website": "https://manhattan-plumbing-lz.business.site/",
+              "linkedIn": null,
+              "facebook": "https://www.facebook.com/LZManhattanPlumbingNewYork",
+              "instagram": null,
+              "rating": 4.9,
+              "reviewCount": 56,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 70,
+              "qualityReasoning": "Core information and a description were found. A website was found. Facebook presence is implied, but direct URL not given, so inferred. Email, LinkedIn and Instagram were not found.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            },
+            {
+              "generatedDate": "2025-11-09T00:55:00Z",
+              "searchCity": "New York",
+              "searchCountry": "United States",
+              "leadNumber": 10,
+              "companyName": "24 Hr. Emergency Plumbing, Hot Water Heater & Boiler Replacement",
+              "category": "Plumber",
+              "description": "Service offering 24-hour emergency plumbing, as well as sewer and drain cleaning, and home remodeling. They provide comprehensive services for water heaters, ensuring that every household has access to hot water when needed. Their team specializes in the installation, replacement, and repair of hot water heaters, catering to the diverse needs of residential clients.",
+              "address": "805 Maple St, Brooklyn, NY 11203, USA",
+              "city": "Brooklyn",
+              "country": "United States",
+              "coordinates": null,
+              "phone": "(518) 335-4282",
+              "email": null,
+              "website": "https://www.24hremergencyplumbingbrooklyn.com/",
+              "linkedIn": null,
+              "facebook": null,
+              "instagram": null,
+              "rating": 4.9,
+              "reviewCount": 569,
+              "businessHours": {
+                "Monday": "Open 24 hours",
+                "Tuesday": "Open 24 hours",
+                "Wednesday": "Open 24 hours",
+                "Thursday": "Open 24 hours",
+                "Friday": "Open 24 hours",
+                "Saturday": "Open 24 hours",
+                "Sunday": "Open 24 hours"
+              },
+              "qualityScore": 70,
+              "qualityReasoning": "Core information and description were found, along with a website. No direct email or social media profiles were found through targeted searches.",
+              "status": "New",
+              "contacted": false,
+              "notes": ""
+            }
+          ],
+          "webhookUrl": "https://agrici.app.n8n.cloud/webhook/leads-scraper-maps",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f73e0b93-4c65-445b-a55c-226cb9093f66",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ee7b11b3a4bb285563e32fdddf3fbac26379ada529b942ee7cda230735046a1"
+  },
+  "id": "KGBAOHnT65T5PfjR",
+  "tags": []
+}
