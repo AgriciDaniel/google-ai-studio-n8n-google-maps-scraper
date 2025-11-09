@@ -3,7 +3,7 @@
 A no-code Google Maps lead scraper built with Google AI Studio (Gemini) and automated with n8n. This repository contains the n8n workflow JSON and all the resources from the full video tutorial.
 
 **Watch the full step-by-step tutorial on YouTube:**
-**https://www.youtube.com/watch?v=qBHubb2inaQ&t**
+**https://www.youtube.com/watch?v=qBHubb2inaQ**
 
 ## Overview
 
@@ -41,7 +41,7 @@ Follow these steps to get your own scraper running in minutes.
 ### 2\. Step 1: Set up Google AI Studio
 
 1.  Open the Google AI Studio App Template:
-    `https://aistudio.google.com/apps/drive/1aVOVu_Ij8r5xeTJnrc7pCLUITH3t6F-m`
+    `https://ai.studio/apps/drive/1aVOVu_Ij8r5xeTJnrc7pCLUITH3t6F-m`
 2.  Make a copy of the app in your own Google Drive.
 3.  You may need to get a Gemini API key (`Get API key` in Google AI Studio) and add it to the app.
 
@@ -78,8 +78,8 @@ Follow these steps to get your own scraper running in minutes.
 
 ## Resources
 
-  * **Full Video Tutorial:** [https://youtu.be/qBHubb2inaQ](https://www.google.com/search?q=https://youtu.be/qBHubb2inaQ)
-  * **n8n:** [https://n8n.io](https://n8n.io)
+  * **Full Video Tutorial:** https://www.youtube.com/watch?v=qBHubb2inaQ
+  *   * **n8n:** [https://n8n.io](https://n8n.io)
   * **Google AI Studio:** [https://aistudio.google.com](https://aistudio.google.com)
 
 ## License
