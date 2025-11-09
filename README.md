@@ -3,7 +3,7 @@
 A no-code Google Maps lead scraper built with Google AI Studio (Gemini) and automated with n8n. This repository contains the n8n workflow JSON and all the resources from the full video tutorial.
 
 **Watch the full step-by-step tutorial on YouTube:**
-**[https://youtu.be/qBHubb2inaQ](https://www.google.com/search?q=https://youtu.be/qBHubb2inaQ)**
+**https://www.youtube.com/watch?v=qBHubb2inaQ&t**
 
 ## Overview
 
