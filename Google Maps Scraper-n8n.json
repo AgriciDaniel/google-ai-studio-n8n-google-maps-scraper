@@ -15,7 +15,7 @@
       ],
       "id": "6c7d314a-4a36-4315-8d67-d2b9afe56c43",
       "name": "Webhook",
-      "webhookId": "58e00905-6ca3-431b-8a65-2b914cbebfd8"
+      "webhookId": "YOUR-WEBHOOK-ID-HERE"
     },
     {
       "parameters": {
