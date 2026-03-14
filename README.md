@@ -84,4 +84,4 @@ Follow these steps to get your own scraper running in minutes.
 
 ## License
 
-This project is open-sourced under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for more details.
+This project is open-sourced under the MIT License. See the [LICENSE](LICENSE) file for details.
