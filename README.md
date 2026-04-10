@@ -85,3 +85,14 @@ Follow these steps to get your own scraper running in minutes.
 ## License
 
 This project is open-sourced under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+Built by [Agrici Daniel](https://agricidaniel.com/about) - AI Workflow Architect.
+
+- [Blog](https://agricidaniel.com/blog) - Deep dives on AI marketing automation
+- [AI Marketing Hub](https://www.skool.com/ai-marketing-hub) - Free community, 2,800+ members
+- [YouTube](https://www.youtube.com/@AgriciDaniel) - Tutorials and demos
+- [All open-source tools](https://github.com/AgriciDaniel)
